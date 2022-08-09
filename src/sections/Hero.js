@@ -50,7 +50,11 @@ export const Hero = () => {
         </ButtonRow>
       </LeftColumn>
       <RightColumn>
-        <ProfileImage src="/images/amadeus.jpg" alt="Amadeus Hein" />
+        <ProfileImage
+          src="/images/amadeus400.png"
+          srcSet="/images/amadeus800.png 800w, /images/amadeus400.png 400w"
+          alt="Amadeus Hein"
+        />
       </RightColumn>
     </HeroContainer>
   );
