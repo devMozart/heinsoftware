@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import styled from "styled-components";
+import { FadeAnimation } from "./components";
+import { Header, Hero, About } from "./sections";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppContainer>
+      <FadeAnimation delayInSeconds={0} lengthInSeconds={0}>
+        <Header />
+      </FadeAnimation>
+      <FadeAnimation delayInSeconds={0} lengthInSeconds={1}>
+        <Hero />
+      </FadeAnimation>
+      <FadeAnimation delayInSeconds={1.5} lengthInSeconds={1}>
+        <About />
+      </FadeAnimation>
+    </AppContainer>
   );
-}
+};
+
+const AppContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #e6f0eb;
+`;
 
 export default App;
